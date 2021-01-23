@@ -30,6 +30,7 @@ Depends : ocaml + dune
 Compile : `dune build ./md2ml.exe`
 
 Usage : `dune exec -- ./md2ml.exe URL file.md file.ml`
+Usage : `dune exec -- ./md2ml.exe sketch file.md file.ml`
 
 Reads an existing file.md and turn it into a file.ml where all ocaml code
 blocks are at toplevel and everything else is in comments.
@@ -40,6 +41,7 @@ If filenames are lacking, stdin and stdout are used instead.
 Depends : curl
 
 Usage : `./getsketch.sh URL dump.json`
+Usage : `./getsketch.sh $sketch dump.json`
 
 URL could be the full `https://sketch.sh/s/.../` url, or just the final token.
 The json filename is optional.
